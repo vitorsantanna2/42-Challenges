@@ -1,4 +1,5 @@
 #include <unistd.h>
+#include "../includes/rush.h"
 
 int	validation_one_four(char **argv, int n)
 {
@@ -25,5 +26,14 @@ int	validation_one_four(char **argv, int n)
 		else
 			stop = 1;
 	}
+	stop = validation_n_itens(stop, n);
 	return (stop);
+}
+
+int	validation_n_itens(int stop, int n)
+{
+	if (n != 16)
+		return (1);
+	else
+		return (stop);
 }
