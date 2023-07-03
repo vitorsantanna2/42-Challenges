@@ -1,6 +1,6 @@
 #include "../includes/rush.h"
 
-void	create_vector(char **argv)
+int	**create_vector(char **argv)
 {
 	int	**square;
 
@@ -9,8 +9,7 @@ void	create_vector(char **argv)
 	square[COL_DOWN] = filling_vector(argv, 8, 14);
 	square[ROW_LEFT] = filling_vector(argv, 16, 22);
 	square[ROW_RIGHT] = filling_vector(argv, 24, 30);
-	print_blank_square(square);
-	free_matrix(square);
+	return (square);
 }
 
 int	*filling_vector(char **argv, int start, int max)

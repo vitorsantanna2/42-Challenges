@@ -7,9 +7,7 @@ int	main(int argc, char **argv)
 		write(2, "Error\n", 6);
 	else
 	{
-		if (validation_one_four(argv, 0))
+		if (validation(argv))
 			write(2, "Error\n", 6);
-		else
-			create_vector(argv);
 	}
 }
