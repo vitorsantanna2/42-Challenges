@@ -1,5 +1,13 @@
-#include <unistd.h>
 #include "../includes/rush.h"
+
+int	validation(char **argv)
+{
+	if (validation_one_four(argv, 0))
+		return (1);
+	if (check_template(create_vector(argv), 0))
+		return (1);
+	return (0);
+}
 
 int	validation_one_four(char **argv, int n)
 {

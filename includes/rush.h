@@ -7,11 +7,13 @@
 # include <stdlib.h>
 # include <unistd.h>
 
+int		check_template(int **matrix, int i);
+int		validation(char **argv);
 int		validation_one_four(char **argv, int n);
 int		validation_n_itens(int stop, int n);
 int		mini_atoi(char num);
 int		*filling_vector(char **argv, int start, int max);
-void	create_vector(char **argv);
+int		**create_vector(char **argv);
 void	free_matrix(int **square);
 void	print_blank_square(int **matrix);
 #endif
