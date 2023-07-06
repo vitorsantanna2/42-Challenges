@@ -1,3 +1,8 @@
+void	sastantua(int size);
+void	draw_pyramid(int pyramid_id, int offset, int size);
+void	write_line_with_door(int id, int borders, int size)
+int	should_print_door(int pyramid_id, int c_index, int borders, int knob)
+
 int	compute_base_size(int size)
 {
 	int base;
