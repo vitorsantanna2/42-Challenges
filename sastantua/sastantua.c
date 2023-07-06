@@ -1,15 +1,16 @@
 int	compute_base_size(int size)
 {
-	int	base;
+	int base;
+	int height;
 
+	height = size + 2;
 	if (size == 1)
 		base = 7;
 	else
 	{
-		if (size % 2 == 0)
-			base = compute_base_size(size -1) + (size + 2) * 2 + 4;
-		else
-			base = compute_base_size(size -1) + (size + 2) * 2 + 2;
+		base = (height / 2) * 2;
+		base += (height * 2);
+		base += compute_base_size(size - 1);
 	}
 	return (base);
 }
