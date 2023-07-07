@@ -42,7 +42,7 @@ void	sastantua(int size)
 	int	offset;
 
 	if (size > 0)
-	{	
+	{
 		index = 0;
 		while (++index <= size)
 		{
@@ -130,7 +130,6 @@ void	ft_putchar(char c)
 	write (1, &c, 1);
 }
 
-
 int	main(int argc, char *argv[])
 {
 	int	id;
@@ -141,4 +140,3 @@ int	main(int argc, char *argv[])
 	sastantua(id);
 	return (0);
 }
-
