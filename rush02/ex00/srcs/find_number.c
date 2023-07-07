@@ -11,11 +11,3 @@ void	find_number_less_20(int num, t_list *dict)
 	write(1, dict->content, ft_strlen(dict->content));
 	write(1, "\n", 1);
 }
-
-void	find_number_less_100(int num, t_list *dict)
-{
-	while (dict->next && dict->key != num)
-	{
-
-	}
-}
