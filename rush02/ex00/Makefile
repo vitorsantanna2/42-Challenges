@@ -15,8 +15,8 @@ SRCS		:= srcs/main.c \
 		srcs/validations.c \
 		srcs/filling.c \
 		srcs/find_number.c \
+		srcs/find_million.c \
 		srcs/selector_number.c \
-		srcs/print.c \
 		gnl/get_next_line.c \
 		gnl/get_next_line_utils.c \
 		libft/ft_atoi.c \

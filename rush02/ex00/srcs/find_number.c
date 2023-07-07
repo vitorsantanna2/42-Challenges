@@ -1,6 +1,6 @@
 #include "rush02.h"
 
-void	find_number_less_20(int num, t_list *dict)
+void	find_number_less_20(long long int num, t_list *dict)
 {
 	while (dict->next && dict->key != num && num <= 20)
 		dict = dict->next;
@@ -9,10 +9,10 @@ void	find_number_less_20(int num, t_list *dict)
 	write(1, dict->content, ft_strlen(dict->content));
 }
 
-void	find_number_less_100(int num, t_list *dict)
+void	find_number_less_100(long long int num, t_list *dict)
 {
-	int	decimal;
-	int	left;
+	long long int	decimal;
+	long long int	left;
 	t_list	*head;
 
 	decimal = (num / 10) * 10;
@@ -24,18 +24,15 @@ void	find_number_less_100(int num, t_list *dict)
 		return ;
 	write(1, dict->content, ft_strlen(dict->content));
 	if (left == 0)
-	{
-		write(1, "\n", 1);
 		return ;
-	}
 	write(1, "-", 1);
 	select_numbers(left, head);
 }
 
-void	find_number_less_1000(int num, t_list *dict)
+void	find_number_less_1000(long long int num, t_list *dict)
 {
-	int	centene;
-	int	left;
+	long int	centene;
+	long int	left;
 	t_list	*head;
 
 	centene = (num / 100);
@@ -49,18 +46,15 @@ void	find_number_less_1000(int num, t_list *dict)
 		return ;
 	write(1, dict->content, ft_strlen(dict->content));
 	if (left == 0)
-	{
-		write(1, "\n", 1);
 		return ;
-	}
 	write(1, " ", 1);
 	select_numbers(left, head);
 }
 
-void	find_number_less_1000000(int num, t_list *dict)
+void	find_number_less_1000000(long long int num, t_list *dict)
 {
-	int	thousand;
-	int	left;
+	long long int	thousand;
+	long long int	left;
 	t_list	*head;
 
 	thousand = (num / 1000);
@@ -74,10 +68,7 @@ void	find_number_less_1000000(int num, t_list *dict)
 		return ;
 	write(1, dict->content, ft_strlen(dict->content));
 	if (left == 0)
-	{
-		write(1, "\n", 1);
 		return ;
-	}
 	write(1, " ", 1);
 	select_numbers(left, head);
 }

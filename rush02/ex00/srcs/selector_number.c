@@ -1,7 +1,11 @@
 #include "rush02.h"
 
-void	select_numbers(int num, t_list *dict)
+void	select_numbers(long long int num, t_list *dict)
 {
+	if (num >= 1000000000 && num < 1000000000000)
+		find_number_less_trillion(num, dict);
+	if (num >= 1000000 && num < 1000000000)
+		find_number_less_billion(num, dict);
 	if (num >= 1000 && num < 1000000)
 		find_number_less_1000000(num, dict);
 	if (num >= 100 && num < 1000)

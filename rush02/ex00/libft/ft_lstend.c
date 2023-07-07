@@ -12,7 +12,7 @@
 
 #include "rush02.h"
 
-void	*ft_lstend(t_list **lst, int key, char *content)
+void	*ft_lstend(t_list **lst, long long int key, char *content)
 {
 	t_list	*temp;
 

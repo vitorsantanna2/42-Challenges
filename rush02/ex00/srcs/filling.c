@@ -16,7 +16,7 @@ void	freestack(t_list **lst)
 	}
 }
 
-void	create_list(int fd, int num)
+void	create_list(int fd, long long int num)
 {
 	t_list	*dic;
 	char	*gnl;
@@ -61,7 +61,7 @@ char	*get_content(char **split_gnl)
 	return (content);
 }
 
-int	get_key(char **split_gnl)
+long long int	get_key(char **split_gnl)
 {
-	return (ft_atoi(split_gnl[0]));
+	return (ft_atol(split_gnl[0]));
 }
