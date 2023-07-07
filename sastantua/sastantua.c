@@ -1,12 +1,27 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   sastantua.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pvieira- <pvieira-@student.42.rio>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/06 21:48:38 by pvieira-          #+#    #+#             */
+/*   Updated: 2023/07/06 22:01:18 by pvieira-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <unistd.h>
+
+void	ft_putchar(char c);
 void	sastantua(int size);
 void	draw_pyramid(int pyramid_id, int offset, int size);
-void	write_line_with_door(int id, int borders, int size)
-int	should_print_door(int pyramid_id, int c_index, int borders, int knob)
+void	write_line_with_door(int id, int borders, int size);
+int		should_print_door(int pyramid_id, int c_index, int borders, int knob);
 
 int	compute_base_size(int size)
 {
-	int base;
-	int height;
+	int	base;
+	int	height;
 
 	height = size + 2;
 	if (size == 1)
@@ -26,12 +41,15 @@ void	sastantua(int size)
 	int	base_size;
 	int	offset;
 
-	index = 0;
-	while (++index <= size)
-	{
-		base_size = compute_base_size(index);
-		offset = ((compute_base_size(size) - base_size) / 2);
-		draw_pyramid(index, offset, size);
+	if (size > 0)
+	{	
+		index = 0;
+		while (++index <= size)
+		{
+			base_size = compute_base_size(index);
+			offset = ((compute_base_size(size) - base_size) / 2);
+			draw_pyramid(index, offset, size);
+		}
 	}
 }
 
@@ -106,3 +124,21 @@ int	should_print_door(int pyramid_id, int c_index, int borders, int knob)
 	}
 	return (should_print);
 }
+
+void	ft_putchar(char c)
+{
+	write (1, &c, 1);
+}
+
+
+int	main(int argc, char *argv[])
+{
+	int	id;
+
+	id = 0;
+	if (argc > 1)
+		id = argv[1][0] - '0';
+	sastantua(id);
+	return (0);
+}
+
