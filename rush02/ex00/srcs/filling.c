@@ -40,7 +40,7 @@ void	create_list(int fd, int num)
 		free(res);
 		free(gnl);
 	}
-	find_number_less_20(num, dic);
+	select_numbers(num, dic);
 	//print_stack(dic);
 	freestack(&dic);
 }

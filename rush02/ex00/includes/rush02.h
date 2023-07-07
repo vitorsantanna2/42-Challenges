@@ -15,6 +15,10 @@ typedef struct s_list
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strtrim(char const *s1, char const *set);
+void	select_numbers(int num, t_list *dict);
+void	find_number_less_1000000(int num, t_list *dict);
+void	find_number_less_1000(int num, t_list *dict);
+void	find_number_less_100(int num, t_list *dict);
 void	find_number_less_20(int num, t_list *dict);
 void	print_stack(t_list *stack);
 size_t	ft_strlen(const char *s);
