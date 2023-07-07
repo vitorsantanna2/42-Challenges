@@ -6,13 +6,13 @@
 /*   By: andde-so <andde-so@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 22:04:29 by andde-so          #+#    #+#             */
-/*   Updated: 2023/07/06 00:16:40 by andde-so         ###   ########.fr       */
+/*   Updated: 2023/07/06 21:41:06 by andde-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "rush.h"
 
-int	str_len(char *str)
+static int	str_len(char *str)
 {
 	int	i;
 

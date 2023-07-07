@@ -6,7 +6,7 @@
 /*   By: andde-so <andde-so@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/04 08:33:07 by andde-so          #+#    #+#             */
-/*   Updated: 2023/07/06 21:06:12 by andde-so         ###   ########.fr       */
+/*   Updated: 2023/07/06 21:42:48 by andde-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,46 +93,3 @@ int	is_all_cols_valid(int matrix[N][N], int *borders)
 	}
 	return (1);
 }
-
-// int	is_valid_matrix(int matrix[N][N], int borders[N * 4])
-// {
-// 	return (is_all_rows_valid(matrix, borders)
-// 		&& is_all_cols_valid(matrix, borders));
-// }
-
-/*
-int main(const int argc, const char **argv)
-{
-	int arr[N] = {1, 3, 4, 2};
-
-	//  [0]  col1up
-	//  [1]  col2up
-	//  [2]  col3up
-	//  [3]  col4up
-	//  [4]  col1down
-	//  [5]  col2down
-	//  [6]  col3down
-	//  [7]  col4down
-	//  [8]  row1left
-	//  [9]  row2left
-	//  [10] row3left
-	//  [11] row4left
-	//  [12] row1right
-	//  [13] row2right
-	//  [14] row3right
-	//  [15] row4right
-
-
-	int boarders[N * 4]  = {4, 3, 2, 1, 1, 2, 2, 2, 4, 3, 2, 1, 1, 2, 2, 2};
-	int matrix[N][N] =
-	{
-		{1, 2, 3, 4},
-		{2, 3, 4, 1},
-		{3, 4, 1, 2},
-		{4, 1, 2, 3},
-	};
-
-	printf("is valid: %d\n", is_valid_matrix(matrix, boarders));
-	return (0);
-}
-*/

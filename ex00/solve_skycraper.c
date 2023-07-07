@@ -6,13 +6,13 @@
 /*   By: andde-so <andde-so@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 23:19:26 by andde-so          #+#    #+#             */
-/*   Updated: 2023/07/06 21:38:00 by andde-so         ###   ########.fr       */
+/*   Updated: 2023/07/06 21:40:58 by andde-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "rush.h"
 
-int	is_valid_num(int matrix[N][N], int row, int col, int num)
+static int	is_valid_num(int matrix[N][N], int row, int col, int num)
 {
 	int	i;
 
@@ -26,7 +26,7 @@ int	is_valid_num(int matrix[N][N], int row, int col, int num)
 	return (1);
 }
 
-int	find_skycraper(int matrix[N][N], int row, int col, int *boarders)
+static int	find_skycraper(int matrix[N][N], int row, int col, int *boarders)
 {
 	int	num;
 
