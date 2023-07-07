@@ -16,10 +16,9 @@ void	freestack(t_list **lst)
 	}
 }
 
-
-void	create_list(int fd)
+void	create_list(int fd, int num)
 {
-	t_list *dic;
+	t_list	*dic;
 	char	*gnl;
 	char	**res;
 
@@ -41,13 +40,14 @@ void	create_list(int fd)
 		free(res);
 		free(gnl);
 	}
-	print_stack(dic);
+	find_number_less_20(num, dic);
+	//print_stack(dic);
 	freestack(&dic);
 }
 
 char	**split_gnl(char *gnl)
 {
-	char **res;
+	char	**res;
 
 	res = ft_split(gnl, ':');
 	return (res);
@@ -57,7 +57,7 @@ char	*get_content(char **split_gnl)
 {
 	char	*content;
 
-	content = ft_strdup(split_gnl[1]);
+	content = ft_strtrim(ft_strtrim(split_gnl[1], " "), "\n");
 	return (content);
 }
 

@@ -12,6 +12,10 @@ typedef struct s_list
 	struct s_list	*next;
 }	t_list;
 
+char	*ft_strchr(const char *s, int c);
+char	*ft_strrchr(const char *s, int c);
+char	*ft_strtrim(char const *s1, char const *set);
+void	find_number_less_20(int num, t_list *dict);
 void	print_stack(t_list *stack);
 size_t	ft_strlen(const char *s);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
@@ -29,5 +33,5 @@ char	*get_content(char **split_gnl);
 int	get_key(char **split_gnl);
 int	is_positive(int num);
 int	ft_isdigit(char *c);
-void	create_list(int fd);
+void	create_list(int fd, int num);
 #endif

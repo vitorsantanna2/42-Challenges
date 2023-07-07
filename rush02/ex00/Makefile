@@ -14,6 +14,7 @@ DEBUG		:= -g
 SRCS		:= srcs/main.c \
 		srcs/validations.c \
 		srcs/filling.c \
+		srcs/find_number.c \
 		srcs/print.c \
 		gnl/get_next_line.c \
 		gnl/get_next_line_utils.c \
@@ -27,7 +28,10 @@ SRCS		:= srcs/main.c \
 		libft/ft_split.c \
 		libft/ft_strdup.c \
 		libft/ft_substr.c \
-		libft/ft_strlen.c 
+		libft/ft_strlen.c \
+		libft/ft_strtrim.c \
+		libft/ft_strchr.c \
+		libft/ft_strrchr.c
 
 OBJS		:= $(SRCS:.c=.o)
 
