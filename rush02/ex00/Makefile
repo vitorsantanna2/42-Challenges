@@ -14,6 +14,7 @@ DEBUG		:= -g
 SRCS		:= srcs/main.c \
 		srcs/validations.c \
 		srcs/filling.c \
+		srcs/print.c \
 		gnl/get_next_line.c \
 		gnl/get_next_line_utils.c \
 		libft/ft_atoi.c \
