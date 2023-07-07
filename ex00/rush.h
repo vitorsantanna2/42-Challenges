@@ -6,13 +6,13 @@
 /*   By: andde-so <andde-so@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 21:46:47 by andde-so          #+#    #+#             */
-/*   Updated: 2023/07/06 00:36:45 by andde-so         ###   ########.fr       */
+/*   Updated: 2023/07/06 21:20:34 by andde-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef RUSH_H
 # define RUSH_H
-# define N 4
+# define N 7
 # include <stdlib.h>
 # include <unistd.h>
 

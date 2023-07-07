@@ -6,7 +6,7 @@
 /*   By: andde-so <andde-so@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 23:19:26 by andde-so          #+#    #+#             */
-/*   Updated: 2023/07/06 00:36:25 by andde-so         ###   ########.fr       */
+/*   Updated: 2023/07/06 21:34:59 by andde-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,33 +26,32 @@ int	is_valid_num(int matrix[N][N], int row, int col, int num)
 	return (1);
 }
 
-void	generate_matrix(int matrix[N][N], int row, int col, int *boarders)
+int	generate_matrix(int matrix[N][N], int row, int col, int *boarders)
 {
 	int	num;
 
 	if (row == N)
 	{
 		if (is_all_cols_valid(matrix, boarders))
-			print_matrix(matrix);
-		return ;
+			return (print_matrix(matrix), 1);
+		return (0);
 	}
 	if (col == N)
-	{
-		if (is_valid_row_col(matrix[row], boarders[(N * 2) + row],
-				boarders[(N * 2) + row + N]))
-			generate_matrix(matrix, row + 1, 0, boarders);
-		return ;
-	}
+		return ((is_valid_row_col(matrix[row], boarders[(N * 2) + row],
+					boarders[(N * 2) + row + N]))
+			&& (generate_matrix(matrix, row + 1, 0, boarders)));
 	num = 0;
 	while (++num <= N)
 	{
 		if (is_valid_num(matrix, row, col, num))
 		{
 			matrix[row][col] = num;
-			generate_matrix(matrix, row, col + 1, boarders);
+			if (generate_matrix(matrix, row, col + 1, boarders))
+				return (1);
 			matrix[row][col] = 0;
 		}
 	}
+	return (0);
 }
 
 int	solve_skycraper(int *boarders)
