@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstend.c                                        :+:      :+:    :+:   */
+/*   parse_arg.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: andde-so <andde-so@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/04 21:46:28 by jsantann          #+#    #+#             */
-/*   Updated: 2023/07/07 23:43:28 by andde-so         ###   ########.fr       */
+/*   Created: 2023/07/07 22:46:57 by andde-so          #+#    #+#             */
+/*   Updated: 2023/07/07 23:07:30 by andde-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "rush02.h"
 
-void	*ft_lstend(t_list **lst, long long int key, char *content)
+long long int	is_digit(char *c)
 {
-	t_list	*temp;
+	long long int	i;
 
-	temp = *lst;
-	if (!temp)
+	i = -1;
+	while (c[++i])
 	{
-		*lst = ft_lstnew(key, content);
-		return (lst);
+		if (c[i] < '0' || c[i] > '9')
+			return (-1);
 	}
-	while (temp->next)
-	{
-		temp = temp->next;
-	}
-	temp->next = ft_lstnew(key, content);
-	return (temp);
+	return (ft_atol(c));
 }

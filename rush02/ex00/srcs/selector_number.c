@@ -12,6 +12,6 @@ void	select_numbers(long long int num, t_list *dict)
 		find_number_less_1000(num, dict);
 	if (num > 20 && num < 100)
 		find_number_less_100(num, dict);
-	if (num > 0 && num <= 20)
+	if (num >= 0 && num <= 20)
 		find_number_less_20(num, dict);
 }

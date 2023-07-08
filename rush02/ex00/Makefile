@@ -12,11 +12,12 @@ DEBUG		:= -g
 ##########################################################
 
 SRCS		:= srcs/main.c \
-		srcs/validations.c \
+		srcs/is_digit.c \
 		srcs/filling.c \
 		srcs/find_number.c \
 		srcs/find_million.c \
 		srcs/selector_number.c \
+		srcs/utils.c \
 		gnl/get_next_line.c \
 		gnl/get_next_line_utils.c \
 		libft/ft_atoi.c \
@@ -69,4 +70,3 @@ fclean: clean
 re: fclean all
 
 .PHONY: all clean fclean re
-
