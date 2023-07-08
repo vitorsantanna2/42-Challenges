@@ -6,7 +6,7 @@
 /*   By: andde-so <andde-so@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/07 22:51:50 by andde-so          #+#    #+#             */
-/*   Updated: 2023/07/08 00:22:54 by andde-so         ###   ########.fr       */
+/*   Updated: 2023/07/08 09:05:05 by pvieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ void	create_list(int fd, long long int num)
 		}
 		res = ft_split(gnl, ':');
 		if (!validate_splited_line(res))
-			return (free_vars(res, gnl), print_error());
+			return (free_vars(res, gnl), print_dict_error());
 		ft_lstend(&dic, ft_atol(res[0]), get_content(res));
 		free_vars(res, gnl);
 	}

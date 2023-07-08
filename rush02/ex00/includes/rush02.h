@@ -6,7 +6,7 @@
 /*   By: andde-so <andde-so@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 00:20:03 by andde-so          #+#    #+#             */
-/*   Updated: 2023/07/08 00:21:14 by andde-so         ###   ########.fr       */
+/*   Updated: 2023/07/08 09:00:24 by pvieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,4 +50,5 @@ long long int	ft_atol(const char *str);
 void			create_list(int fd, long long int num);
 void			print_error(void);
 void			free_vars(char **splited_line, char *line);
+void			print_dict_error(void);
 #endif
