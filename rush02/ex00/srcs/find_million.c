@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   find_million.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: andde-so <andde-so@student.42.rio>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/08 00:18:14 by andde-so          #+#    #+#             */
+/*   Updated: 2023/07/08 00:18:20 by andde-so         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "rush02.h"
 
 void	find_number_less_billion(long long int num, t_list *dict)
 {
 	long long int	million;
 	long long int	left;
-	t_list	*head;
+	t_list			*head;
 
 	million = (num / 1000000);
 	left = num % 1000000;
@@ -26,7 +38,7 @@ void	find_number_less_trillion(long long int num, t_list *dict)
 {
 	long long int	billion;
 	long long int	left;
-	t_list	*head;
+	t_list			*head;
 
 	billion = (num / 1000000000);
 	left = num % 1000000000;

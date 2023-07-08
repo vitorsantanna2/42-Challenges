@@ -6,16 +6,14 @@
 /*   By: andde-so <andde-so@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/07 22:51:50 by andde-so          #+#    #+#             */
-/*   Updated: 2023/07/07 23:41:09 by andde-so         ###   ########.fr       */
+/*   Updated: 2023/07/08 00:22:54 by andde-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "rush02.h"
 #include "get_next_line.h"
 
-static char				**split_gnl(char *gnl);
-static char				*get_content(char **split_gnl);
-static long long int	get_key(char **split_gnl);
+static char	*get_content(char **split_gnl);
 
 void	freestack(t_list **lst)
 {
@@ -44,14 +42,6 @@ int	validate_splited_line(char **splited_line)
 	return (1);
 }
 
-void	free_vars(char **splited_line, char *line)
-{
-	free(splited_line[0]);
-	free(splited_line[1]);
-	free(splited_line);
-	free(line);
-}
-
 void	create_list(int fd, long long int num)
 {
 	t_list	*dic;
@@ -69,10 +59,10 @@ void	create_list(int fd, long long int num)
 			free(gnl);
 			continue ;
 		}
-		res = split_gnl(gnl);
+		res = ft_split(gnl, ':');
 		if (!validate_splited_line(res))
 			return (free_vars(res, gnl), print_error());
-		ft_lstend(&dic, get_key(res), get_content(res));
+		ft_lstend(&dic, ft_atol(res[0]), get_content(res));
 		free_vars(res, gnl);
 	}
 	select_numbers(num, dic);
@@ -80,20 +70,7 @@ void	create_list(int fd, long long int num)
 	freestack(&dic);
 }
 
-static char	**split_gnl(char *gnl)
-{
-	char	**res;
-
-	res = ft_split(gnl, ':');
-	return (res);
-}
-
 static char	*get_content(char **split_gnl)
 {
 	return (ft_strtrim(split_gnl[1], "\n "));
-}
-
-static long long int	get_key(char **split_gnl)
-{
-	return (ft_atol(split_gnl[0]));
 }

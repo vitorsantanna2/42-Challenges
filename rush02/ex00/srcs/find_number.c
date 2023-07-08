@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   find_number.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: andde-so <andde-so@student.42.rio>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/08 00:18:04 by andde-so          #+#    #+#             */
+/*   Updated: 2023/07/08 00:18:05 by andde-so         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "rush02.h"
 
 void	find_number_less_20(long long int num, t_list *dict)
@@ -13,7 +25,7 @@ void	find_number_less_100(long long int num, t_list *dict)
 {
 	long long int	decimal;
 	long long int	left;
-	t_list	*head;
+	t_list			*head;
 
 	decimal = (num / 10) * 10;
 	left = num % 10;
@@ -33,7 +45,7 @@ void	find_number_less_1000(long long int num, t_list *dict)
 {
 	long int	centene;
 	long int	left;
-	t_list	*head;
+	t_list		*head;
 
 	centene = (num / 100);
 	left = num % 100;
@@ -55,7 +67,7 @@ void	find_number_less_1000000(long long int num, t_list *dict)
 {
 	long long int	thousand;
 	long long int	left;
-	t_list	*head;
+	t_list			*head;
 
 	thousand = (num / 1000);
 	left = num % 1000;
