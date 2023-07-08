@@ -6,7 +6,7 @@
 /*   By: andde-so <andde-so@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/07 22:46:57 by andde-so          #+#    #+#             */
-/*   Updated: 2023/07/08 09:25:44 by pvieira-         ###   ########.fr       */
+/*   Updated: 2023/07/08 09:29:04 by jsantann         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 long long int	is_digit(char *c)
 {
 	long long int	i;
-	
+
 	if (ft_strlen(c) >= 13)
 		return (-1);
 	i = -1;
