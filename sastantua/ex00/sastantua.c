@@ -6,7 +6,7 @@
 /*   By: pvieira- <pvieira-@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 21:48:38 by pvieira-          #+#    #+#             */
-/*   Updated: 2023/07/06 22:01:18 by pvieira-         ###   ########.fr       */
+/*   Updated: 2023/07/08 10:17:47 by pvieira-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -123,20 +123,4 @@ int	should_print_door(int pyramid_id, int c_index, int borders, int knob)
 		should_print &= c_index == center + (door_size / 2) - 1;
 	}
 	return (should_print);
-}
-
-void	ft_putchar(char c)
-{
-	write (1, &c, 1);
-}
-
-int	main(int argc, char *argv[])
-{
-	int	id;
-
-	id = 0;
-	if (argc > 1)
-		id = argv[1][0] - '0';
-	sastantua(id);
-	return (0);
 }
